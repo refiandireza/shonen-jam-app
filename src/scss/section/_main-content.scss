@@ -1,0 +1,160 @@
+@use '../custom' as *;
+@use '../fontawesome.scss' as *;
+@use '../swiper.scss';
+
+
+
+.main {
+  max-width: 100%;
+  height: 250px;
+  background-color: $light;
+}
+
+
+.genre {
+    border: 2px solid $primary;
+    .header {
+        color: $light;
+        background-color: $primary;
+        padding: 0.4em;
+        h4 {
+            margin: 0px;
+        };
+    }
+    .list-item {
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding: 20px 40px;
+        .item {
+            padding: 10px;
+            background-color: $primary;
+            border: 2px solid $light;
+            border-radius: 10px;
+            margin: 0 10px 10px 0;
+            cursor: pointer;
+            transition: 0.3s;
+            p {
+                font-weight: 500;
+                color: $light;
+                margin-bottom: 0;
+            }
+        }
+        .item:hover {
+            background-color: $light;
+            border-color: $primary;
+            p {
+                color: $primary;
+            }
+        }
+        .item.active {
+            background-color: $light;
+            border-color: $primary;
+            p {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.search-wrapper {
+    .header {
+        color: $primary;
+    }
+    .data-wrapper {
+        img {
+            height: 220px;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            color: $primary;
+            text-decoration: none;
+            font-size: 1em;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+        .card-title:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            font-size: 14px;
+            text-align: justify;
+        }
+        .rating {
+            font-weight: 500;
+            .value {
+                font-weight: 600;
+                color: #F0A500;
+            }
+        }
+
+    }
+    
+}
+
+@include media-breakpoint-down(md) {
+    .main {
+        height: 180px;
+    }
+
+    .genre {
+        border: 2px solid $primary;
+        .header {
+            color: $light;
+            background-color: $primary;
+            padding: 0.4em;
+            h4 {
+                margin: 0px;
+            };
+        }
+        .list-item {
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 20px 40px;
+            .item {
+                padding: 5px;
+                background-color: $primary;
+                border: 2px solid $light;
+                border-radius: 10px;
+                margin: 0 5px 5px 0;
+                cursor: pointer;
+                transition: 0.3s;
+                p {
+                    font-weight: 500;
+                    color: $light;
+                    margin-bottom: 0;
+                    font-size: 0.75em;
+                }
+            }
+            .item:hover {
+                background-color: $light;
+                border-color: $primary;
+                p {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .search-wrapper {
+        .data-wrapper {
+            .card-img-cont {
+                position: relative;
+                width: 100%;
+                img {
+                    height: 300px;
+                    width: 100%;
+                    object-fit: fill;
+                }
+            }
+        }
+    }
+}

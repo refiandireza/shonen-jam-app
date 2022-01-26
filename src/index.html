@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shonen Jam</title>
+</head>
+<body>
+<header>
+  <app-bar></app-bar>
+</header>
+
+<section class="detail-item bg-light" style="display: none;">
+  <div class="background"></div>
+  <div class="container alpha">
+      <div class="row column-wrapper">
+        <div class="col-lg-8 col-md-12 col-12 left">
+          <div class="px-4 pt-3 inner shadow rounded-3">
+            <div class="title" id="detail-title">
+            </div>
+            <div class="score my-4">
+                <div class="img-wrapper pb-3">
+                  <img src="" id="detail-image-score" class="img-thumbnail img-fluid" alt="">
+                </div>
+                  <div class="rating">
+                  <div class="text-wrap shadow">
+                      <div>Score <i class="fas fa-star"></i> <span id="detail-score"></span></div>
+                      <div>Ranked #<span id="detail-rank"></span></div>
+                      <div>Popularity #<span id="detail-popularity"></span></div>
+                      <div>Members <span id="detail-members"></span></div>
+                  </div>
+                  </div>
+            </div>
+            <div class="synopsis">
+              <div class="title"><h5>Synopsis</h5></div>
+              <div class="content pt-3" id="detail-synopsis">
+              </div>
+            </div>
+            <div class="characters">
+              <div class="title"><h5>Characters</h5></div>
+              <div class="row content-char pt-3 ps-3">
+              </div>
+            </div>
+            <div class="staff mt-2">
+              <div class="title"><h5>Staff</h5></div>
+              <div class="row content-staff pt-3 ps-3">
+              </div>
+            </div>
+            <div class="reviews">
+              <div class="title">
+                <h5>Reviews</h5>
+              </div>
+              <div class="content reviews-list">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-4 col-md-12 col-12 right">
+          <div class="px-3 inner shadow rounded-3 py-3">
+            <div class="title pb-2">
+              <h4>Alternative Title</h4>
+              <div class="spaceit">English: <strong class="eng-title"></strong></div>
+              <div class="spaceit">Synonims: <strong class="synonims"></strong></div>
+              <div class="spaceit">Japanese: <strong class="j-title"></strong></div>
+            </div>
+            <div class="title pb-2">
+              <h4>Information</h4>
+              <div class="spaceit">Type: <strong class="type"></strong></div>
+              <div class="spaceit">Episodes: <strong class="episodes"></strong></div>
+              <div class="spaceit">Premiered: <strong class="premiered"></strong></div>
+              <div class="spaceit">Broadcast: <strong class="broadcast"></strong></div>
+              <div class="spaceit">Producers: <strong class="producers"></strong></div>
+              <div class="spaceit">Licensors: <strong class="licensors"></strong></div>
+              <div class="spaceit">Studios: <strong class="studios"></strong></div>
+              <div class="spaceit">Source: <strong class="source"></strong></div>
+              <div class="spaceit">Genres: <strong class="genres"></strong></div>
+              <div class="spaceit">Themes: <strong class="themes"></strong></div>
+              <div class="spaceit">Demographic: <strong class="demgraphic"></strong></div>
+              <div class="spaceit">Duration: <strong class="duration"></strong></div>
+              <div class="spaceit">Rating: <strong class="side-rating"></strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<main style="display: block;">
+  <jumbotron-header></jumbotron-header>
+  <div class="container shadow">
+    <div class="row pb-4">
+      <section class="col-xl-9 col-12 left-colomn mt-3">
+        <div class="genre shadow-sm rounded-1">
+          <div class="header">
+            <h4>Genre</h4>
+          </div>
+          <genre-list></genre-list>
+        </div>
+        
+        <div class="search-wrapper d-block pt-2">
+          <div class="header pt-3">
+            <h4 class="ps-3"><span><i class="fas fa-search"></i></span> Search Result</h4>
+          </div>
+          <anime-list></anime-list>
+        </div>
+    </section>
+
+      <aside class="col-xl-3 col-12 side-content">
+        <search-bar></search-bar>
+        <div class="ranking-digest d-none d-xl-block d-xxl-block shadow mt-4">
+          <div class="ranking-header d-flex flex-row">
+            <h2>Top Airing Anime</h2>
+            <b>More</b>
+          </div>
+          <airing-list></airing-list>
+        </div>
+        
+        <div class="ranking-digest d-none d-xl-block d-xxl-block shadow mt-4">
+          <div class="ranking-header d-flex flex-row">
+            <h2>Most Popular Anime</h2>
+            <b>More</b>
+          </div>
+          <popular-list></popular-list>
+        </div>
+
+        <card-author></card-author>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer">
+    <p>Dicoding Fundamental Front End Submission &copy; 2021</p>
+  </div>
+</footer>
+</body>
+</html>

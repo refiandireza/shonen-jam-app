@@ -1,0 +1,233 @@
+@use '../custom' as *;
+
+$font_primary: 12px;
+
+.left-colomn {
+    border-right: 0.1px solid $abu;
+}
+
+@include media-breakpoint-down(xl) {
+    .left-colomn {
+        border: none;
+    }
+}
+
+
+.side-content {
+    padding: 9px;
+}
+.ranking-digest {
+    // padding: 0 1em 1em 1em;
+    margin-bottom: 20px;
+    background-color: $light;
+    .ranking-header {
+        justify-content: space-around;
+        background-color: $primary;
+        color: $light;
+        padding: 6px 8px 4px 8px;
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 4px 0 5px 0;
+            padding: 3px 0 3px 0;
+            height: auto;
+        }
+        b {
+            font-weight: 600;
+            font-size: $font_primary;
+            padding-top: 6px;
+            cursor: pointer;
+        }
+        b:hover {
+            color: $primary-light;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 16px 0 16px 0;
+        .ranking-unit {
+            padding: 0 0.75em 0.75em 0.75em;
+            width: 100%;
+            .rank {
+                font-size: 16px;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+            .lazy-load {
+                width: 50px;
+                height: 70px;
+            }
+            .data {
+                width: 100%;
+                padding-left: 5px;
+                a {
+                    text-decoration: none;
+                    
+                }
+                .title {
+                    font-size: $font_primary;
+                    font-weight: 600;
+                    width: 120px;
+                    padding-right: 5px;
+                    display: block;
+                }
+                .button-add-ranking {
+                    font-weight: 500;
+                    font-size: 10px;
+                    color: $light;
+                    background-color: $primary;
+                    padding: 2px 4px 2px 4px;
+                    border-radius: 5px;
+                }
+
+                .button-add-ranking:hover {
+                    color: $light;
+                    background-color: $dark;
+                }
+                .info, .members {
+                    font-size: $font_primary;
+                    font-weight: 400;
+                    width: 100%;
+                }
+                .members::before {
+                    content: "\a";
+                    white-space: pre;
+                }
+            }
+        }
+    }
+}
+
+.ranking-digest-mobile {
+    margin-bottom: 20px;
+    background-color: $light;
+    .swipe-header-aside {
+        justify-content: space-around;
+        background-color: $primary;
+        color: $light;
+        padding: 6px 8px 4px 8px;
+        .titles, .extend {
+            color: $light;
+            text-decoration: none;
+        }
+        .titles {
+            font-weight: 500;
+            padding-left: 10px;
+        }
+        .extend {
+            float: right;
+            padding-right: 10px;
+        }
+        .extend:hover {
+            text-decoration: underline;
+        }
+    }
+    .digest {
+        max-width: 100%;
+        height: 180px;
+        background-color: $light;
+        
+        .swiper-slide {
+            width: 110px;
+            height: auto;
+            position: relative;
+            img {
+                width: 100%;
+                height: 155px;
+                object-fit: cover;
+            }
+            .add-btn {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                z-index: 10;
+                border: 2px solid $light;
+                opacity: 0.7;
+                i {
+                    color: $light;
+                    background-color: $primary;
+                    font-size: 1em;
+                    padding: 4px;
+                    height: 100%;
+                    width: 100%;
+                    
+                }
+            }
+            .title {
+                position: relative;
+                height: 15px;
+                padding: 2px 5px 2px;
+                h4 {
+                    font-size: 0.75em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+.biodata {
+    border-radius: 10px;
+    border: 2px solid $abu;
+    justify-content: center;
+    .img {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+        border: 3px solid $abu;
+        
+        img {
+            width: 100%;
+            height: auto;
+            transform: scale(2);
+            position: absolute;
+            top: 1.4em;
+        }
+    }
+    .detail {
+        display:inline-block; 
+        padding:0px; 
+        margin:0px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        h4 {
+            font-size: 1em;
+            font-weight: 600;
+            
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 0.8em;
+            font-weight: 500;
+            
+            margin: 0;
+            padding: 0;
+        }
+        .socmed {
+            margin-top: 0;
+            
+            a {
+                padding: 3px;
+                font-size: 1em;
+                color: $primary;
+                cursor: pointer;
+            }
+            a:hover {
+                color: $abu;
+            }
+        }
+    }
+
+}
+
+@include media-breakpoint-down(md) {
+    .biodata {
+        justify-content: center;
+    }
+}

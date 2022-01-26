@@ -1,0 +1,26 @@
+@use '../custom' as *;
+
+.header {
+   .alphabet {
+        font-family: 'Lobster';
+        font-weight: 700;
+        font-size: 1.5em;
+        align-items: center;
+        position: relative;
+        color: $primary;
+        cursor: pointer;
+        i {
+            color: $primary;
+        }
+    } 
+}
+
+.panel {
+    & ul {
+        font-weight: 600;
+        font-size: 1.5em;
+        li {
+            padding: 0 5px 0 5px;
+        }
+    }
+}

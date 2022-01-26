@@ -1,0 +1,258 @@
+@use '../custom' as *;
+
+.detail-item {
+    position: relative;
+    height: auto;
+    
+    .alpha, .device {
+        z-index: 10;
+        top: -30vh;
+        height: auto;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+.background {
+    height: 45vh;
+    background-color: $primary-dark;
+    color: $light;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+.left {
+    color: $dark;
+    height: auto;
+    .title {
+        border-bottom: 1.5px solid $primary;
+        color: $primary;
+        h3 {
+            font-weight: 600;
+        }
+    }
+    .score {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .img-wrapper {
+            img {
+                width: 200px;
+                height: 250px;
+            }
+        }
+        .rating {
+            height: auto;
+            padding-bottom: 0;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            .text-wrap {
+                background-color: $primary;
+                padding: 10px;
+                
+                div {
+                    display: inline-block;
+                    margin-right: 5px;
+                    padding: 5px;
+                    font-size: 1.1em;
+                    font-weight: 500;
+                    color: $light;
+                    i {
+                        color: orange;
+                    }
+                }
+            }
+        }
+    }
+    .characters, .staff {
+        .content-char, .content-staff {
+            .char, .staff {
+                display: flex;
+                padding-bottom: 10px;
+                .img-wrapper {
+                    img {
+                        width: 80px;
+                        height: 120px;
+                    }
+                }
+                .text {
+                    padding-left: 10px;
+                    p {
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 0.9em;
+                    color: $primary;
+                    span {
+                        color: $dark;
+                    }
+                }
+                }
+            }
+        }
+    }
+    .theme, .reviews {
+        padding: 10px 0;
+        .title {
+            font-weight: 500;
+        }
+        .content {
+            padding-top: 10px;
+            p {
+                margin: 0px;
+                padding: 2px;
+            }
+        }
+    }
+
+    .reviews {
+        .content {
+            .reviews-item {
+                border-bottom: 1px solid $dark;
+                .item-header {
+                    border-bottom: 1px solid $dark;
+                    display: flex;
+                    padding-bottom: 5px;
+                    img {
+                        width: 60px;
+                        height: auto;
+                    }
+                    span {
+                        font-size: 0.75em;
+                        display: block;
+                    }
+                }
+                .item {
+                    position: relative;
+                    height: 150px;
+                    overflow: hidden;
+                    p {
+                        color: $dark;
+                        font-size: 0.9em;
+                    }
+                }
+                .item::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50px;
+                    background: linear-gradient(to top, rgba($dark, 0.35), rgba($dark, 0.01));
+                }
+                .more-button {
+                    position: relative;
+                    padding: 5px;
+                    background-color: $primary;
+                    margin-top: 10px;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: $light;
+                    text-decoration: none;
+                    font-size: 0.75em;
+                    
+                }
+                .more-button::before {
+                    content: 'Read More';
+                }
+
+            }
+            .reviews-item.active {
+                .item {
+                    height: auto;
+                }
+                .item::before {
+                    display: none;
+                }
+                .more-button {
+                    background: $light;
+                    color: $primary;
+                    border: 1px solid $primary;
+                }
+                .more-button::before {
+                    content: 'Read Less'
+                }
+            }
+        }
+    }
+    
+}
+
+.right {
+    h4 {
+        color: $primary;
+        font-weight: 600;
+        border-bottom: 1.5px solid $primary;
+    }
+    .spaceit {
+        color: $dark;
+        font-weight: 500;
+    }
+}
+
+
+.inner {
+    height: auto;
+    background-color: white;
+}
+
+
+
+@include media-breakpoint-down(lg) {
+    .background {
+        padding-top: 50px;
+    }
+    .right {
+        margin-top: 20px;
+        .title {
+            padding-top: 10px;
+        }
+    }
+    .device {
+        .accordion {
+            .accordion-item {
+                .accordion-button {
+                    font-size: 0.75em;
+                    font-weight: 600;
+                    color: $primary;
+                }
+                .synopsis {
+                    .content {
+                        text-align: justify;
+                        font-size: 0.75em;
+                    }
+                }
+                .staff, .characters {
+                    .content-char, .content-staff {
+                        .text {
+                            font-size: 0.75em;
+                        }
+                        .img-wrapper {
+                            img {
+                                object-fit: fill;
+                                height: 80px;
+                            }
+                        }
+                    }
+                }
+                .reviews {
+                    .item {
+                        font-size: 0.75em;
+                        height: 75px;
+                    }
+                }
+                .information {
+                    .content {
+                        .spaceit {
+                            font-size: 0.75em;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

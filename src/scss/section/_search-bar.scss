@@ -1,0 +1,25 @@
+@use '../custom' as *;
+
+.search-container {
+    width: 100%;
+    margin: 10px;
+    height: 40px;
+    
+    input {
+        border: none;
+        border-bottom: 1px solid $primary;
+        padding-left: 10px;
+        height: 100%;
+        max-width: 200px;
+        }
+    button {
+        background-color: $primary;
+        color: $light;
+        border: none;
+        padding: 0 8px 0 ;
+        height: 100%;
+        margin-left: 10px;
+        border-radius: 5px;
+        width: auto;
+    }
+}
